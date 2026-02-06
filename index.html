@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App - واتساب</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- مكتبة الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- شاشة تسجيل الدخول -->
+    <div id="login-screen">
+        <div class="login-container">
+            <i class="fab fa-whatsapp logo-icon"></i>
+            <h2>تسجيل الدخول</h2>
+            <p>أدخل اسمك للانضمام للدردشة</p>
+            <input type="text" id="username-input" placeholder="اكتب اسمك هنا...">
+            <button id="login-btn">دخول</button>
+        </div>
+    </div>
+
+    <!-- شاشة الدردشة -->
+    <div id="chat-screen" class="hidden">
+        <header>
+            <div class="profile-info">
+                <div class="avatar"><i class="fas fa-user"></i></div>
+                <div class="info-text">
+                    <h3>المجموعة العامة</h3>
+                    <span id="current-user-display">...</span>
+                </div>
+            </div>
+            <div class="header-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </header>
+
+        <div id="messages-container">
+            <!-- هنا تظهر الرسائل -->
+        </div>
+
+        <footer>
+            <i class="far fa-smile icon-btn"></i>
+            <i class="fas fa-plus icon-btn"></i>
+            <input type="text" id="message-input" placeholder="اكتب رسالة">
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </footer>
+    </div>
+
+    <!-- ملف الجافاسكريبت (نوع module ضروري لعمل Firebase) -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
